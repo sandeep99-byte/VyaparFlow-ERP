@@ -1,0 +1,6 @@
+{% extends "base.html" %}{% block title %}VyaparFlow ERP{% endblock %}
+{% block content %}<div class="row align-items-center py-5"><div class="col-lg-7">
+<span class="badge text-bg-primary mb-3">FREE STARTER PROJECT</span><h1 class="display-4 fw-bold">Your shop. Your stock. Your accounts.</h1>
+<p class="lead text-secondary my-4">A simple starter ERP for small businesses. Track products, customers, sales, expenses and low stock from one dashboard.</p>
+<a class="btn btn-primary btn-lg me-2" href="{% url 'register' %}">Create free account</a><a class="btn btn-outline-secondary btn-lg" href="{% url 'login' %}">Login</a>
+</div><div class="col-lg-5 mt-5 mt-lg-0"><div class="card p-4"><div class="row g-3"><div class="col-6"><div class="p-3 bg-light rounded-3"><small>Sales today</small><h3>₹—</h3></div></div><div class="col-6"><div class="p-3 bg-light rounded-3"><small>Products</small><h3>—</h3></div></div><div class="col-12"><div class="p-3 bg-light rounded-3"><strong>Manage your shop in one place</strong><p class="mb-0 text-secondary">Billing · Inventory · Customers · Expenses</p></div></div></div></div></div></div>{% endblock %}

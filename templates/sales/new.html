@@ -1,0 +1,4 @@
+{% extends "base.html" %}{% block title %}New bill · VyaparFlow{% endblock %}{% block content %}
+<div class="row justify-content-center"><div class="col-lg-7"><div class="card p-4 p-md-5"><h1 class="h3 page-title">Create a bill</h1><p class="text-secondary">MVP version: one product per bill. Stock is reduced after a successful sale.</p>
+<form method="post">{% csrf_token %}{{ form.non_field_errors }}{% for field in form %}<div class="mb-3"><label class="form-label" for="{{ field.id_for_label }}">{{ field.label }}</label>{{ field }}{% if field.errors %}<div class="text-danger small">{{ field.errors }}</div>{% endif %}</div>{% endfor %}
+<button class="btn btn-primary">Create bill</button> <a class="btn btn-outline-secondary" href="{% url 'sales' %}">Cancel</a></form></div></div></div>{% endblock %}
